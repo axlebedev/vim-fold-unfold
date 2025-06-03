@@ -10,7 +10,9 @@ export def FoldOrMoveLeft()
         normal! h
     endif
 enddef
+# }}}
 
+# If we at floded line - unfold recursevly {{{
 export def UnfoldOrMoveRight()
     if foldclosed(line('.')) != -1
         # Cursor is on folded line - open recursively
@@ -20,3 +22,4 @@ export def UnfoldOrMoveRight()
         normal! L
     endif
 enddef
+# }}}
